@@ -1,0 +1,30 @@
+% !TEX program = xelatex
+% Example: Figure float with caption and label
+\documentclass[11pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{float}
+
+\begin{document}
+
+\section*{العناصر الطافية}
+
+% عنصر طافٍ في أعلى الصفحة
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{example-image}
+  \caption{رسمٌ توضيحيٌّ يُمثّلُ العلاقةَ بينَ المتغيّرَين}
+  \label{fig:example}
+\end{figure}
+
+% إحالة للشكل في النص
+كما يَظهرُ في الشكلِ \ref{fig:example}، فإنَّ العلاقةَ خطّيةٌ.
+
+% عنصر طافٍ في موضعٍ محدّدٍ بالقوة
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{example-image}
+  \caption{هذا الشكلُ يَظهرُ في موضعِهِ المحدّد}
+  \label{fig:forced}
+\end{figure}
+
+\end{document}
