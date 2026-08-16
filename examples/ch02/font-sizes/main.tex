@@ -1,0 +1,26 @@
+% !TEX program = xelatex
+% Example 2.4: Font sizes
+% Chapter 2, Section 2.3
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+
+\begin{document}
+
+{\tiny tiny text} \\
+{\scriptsize scriptsize text} \\
+{\footnotesize footnotesize text} \\
+{\small small text} \\
+{\normalsize normalsize text (default)} \\
+{\large large text} \\
+{\Large Large text} \\
+{\LARGE LARGE text} \\
+{\huge huge text} \\
+{\Huge Huge text}
+
+\section*{Custom Size}
+\fontsize{14pt}{16pt}\selectfont
+This text is 14pt with 16pt baseline.
+
+\end{document}
