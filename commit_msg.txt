@@ -1,4 +1,4 @@
-Add chapter 9 examples: git-setup and git-branches
+Add chapter 9 example: github-push
 
 Generated with [Devin](https://devin.ai)
 
