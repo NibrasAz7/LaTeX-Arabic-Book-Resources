@@ -1,0 +1,65 @@
+% Example: Fractions, square roots, and exponents
+% Demonstrates \frac for fractions, \sqrt for roots (including nth roots),
+% and superscript/subscript notation for exponents and indices.
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+\begin{document}
+
+\section*{Fractions, Roots, and Exponents}
+
+\subsection*{Fractions}
+
+A simple fraction:
+
+\[
+  \frac{1}{2} + \frac{1}{3} = \frac{5}{6}
+\]
+
+Nested fractions:
+
+\[
+  \frac{1}{1 + \frac{1}{1 + \frac{1}{2}}}
+\]
+
+\subsection*{Square and nth Roots}
+
+Square root:
+
+\[
+  \sqrt{2} \approx 1.4142
+\]
+
+nth root (using the optional argument):
+
+\[
+  \sqrt[3]{8} = 2, \qquad \sqrt[n]{x^n} = |x|
+\]
+
+Root of a fraction:
+
+\[
+  \sqrt{\frac{a^2 + b^2}{2}}
+\]
+
+\subsection*{Exponents and Subscripts}
+
+\[
+  a^2 + b^2 = c^2
+\]
+
+\[
+  2^{10} = 1024, \qquad e^{i\pi} = -1
+\]
+
+\[
+  x_1 + x_2 + \cdots + x_n = \sum_{i=1}^{n} x_i
+\]
+
+Combined fraction, root, and exponent:
+
+\[
+  \left( \frac{x^2 + 1}{\sqrt{x}} \right)^{3}
+\]
+
+\end{document}

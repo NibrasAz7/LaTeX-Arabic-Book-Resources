@@ -1,4 +1,4 @@
-# LaTeX للنشر العلمي — الموارد والأمثلة
+# فن التنضيد بـ LaTeX — الموارد والأمثلة
 
 <div align="center">
 
@@ -7,11 +7,11 @@
 ![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
 
-### LaTeX for Scientific Publishing — Resources & Examples
+### The Art of Typesetting with LaTeX — Resources & Examples
 
-**دليل شامل للباحثين وطلاب الدراسات العليا**
+**دليلك الشامل للتنضيد كعالِم**
 
-*A Comprehensive Guide for Researchers and Graduate Students*
+*A Comprehensive Guide for Scholars*
 
 </div>
 
@@ -21,7 +21,7 @@
 
 هذا المستودع يحتوي على الموارد والأمثلة العملية المرافقة لكتاب **«LaTeX للنشر العلمي»** لمؤلفه د. نبراس أبو الذهب (مركز نبراس). يضم جميع ملفات الأمثلة القابلة للنسخ والتصريف مباشرة، منظمة حسب الفصول.
 
-This repository contains the companion resources and code examples for the book **"LaTeX for Scientific Publishing"** by Dr. Nibras Abo Alzahab (Nibras Center). It includes all example files, organized by chapter, ready to compile.
+This repository contains the companion resources and code examples for the book **"The Art of Typesetting with LaTeX"** by Dr. Nibras Abo Alzahab (Nibras Center). It includes all example files, organized by chapter, ready to compile.
 
 ---
 

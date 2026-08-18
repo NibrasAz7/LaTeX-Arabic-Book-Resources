@@ -1,0 +1,36 @@
+% Example: Inline math ($...$) vs display math (\[...\])
+% Demonstrates the difference between math embedded in text and math
+% displayed on its own centered line.
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+\begin{document}
+
+\section*{Inline vs Display Math}
+
+Inline math flows within the surrounding text. For example, the famous
+identity \( e^{i\pi} + 1 = 0 \) relates five fundamental constants, and
+the quadratic formula \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \) can
+appear mid-sentence like this.
+
+Display math is typeset on its own centered line, which improves
+readability for larger expressions:
+
+\[
+  \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+\]
+
+Another display example:
+
+\[
+  \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\]
+
+Notice how inline math like \( a^2 + b^2 = c^2 \) stays compact, while
+the same equation in display mode stands out:
+
+\[
+  a^2 + b^2 = c^2
+\]
+
+\end{document}

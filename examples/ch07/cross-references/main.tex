@@ -1,0 +1,32 @@
+% !TEX program = xelatex
+% Example: Cross-references with \ref, \cref, and \Cref
+% Demonstrates labeling sections and equations, then referencing them
+% using \ref (plain), \cref (cleveref, auto-type), and \Cref (capitalized).
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\begin{document}
+
+\section{Introduction}\label{sec:intro}
+This is the introduction section. We will reference it later.
+
+\section{Methods}\label{sec:methods}
+As shown in \ref{sec:intro}, the introduction sets the stage.
+Using \texttt{cleveref}, we can write \cref{sec:intro} and
+\cref{sec:methods} without manually typing the word ``section.''
+
+\Cref{eq:euler} below is a famous identity:
+\begin{equation}\label{eq:euler}
+  e^{i\pi} + 1 = 0
+\end{equation}
+
+We can reference it with \cref{eq:euler} or \Cref{eq:euler}
+at the start of a sentence.
+
+\section{Results}\label{sec:results}
+See \cref{sec:intro,sec:methods,eq:euler} for a grouped reference
+to multiple labels at once.
+
+\end{document}
