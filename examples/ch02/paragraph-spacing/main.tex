@@ -1,0 +1,38 @@
+% !TEX program = xelatex
+% Example 2.7: Paragraph spacing and indentation
+% Chapter 2, Section 2.4
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{setspace}
+\setmainfont{Latin Modern Roman}
+
+% Paragraph settings
+\setlength{\parindent}{1em}    % First-line indent
+\setlength{\parskip}{0pt}      % No paragraph skip
+
+% Line spacing
+\onehalfspacing  % 1.5x line spacing
+
+\begin{document}
+
+\section*{Indented Paragraphs (Traditional)}
+This is the first paragraph. It has a first-line indent that helps
+readers distinguish paragraph boundaries in continuous text.
+
+This is the second paragraph. Note the indent at the beginning.
+The indent replaces vertical spacing between paragraphs.
+
+\section*{No Indent for This Paragraph}
+\noindent This paragraph has no indent because of \texttt{\textbackslash noindent}.
+Use it for the first paragraph after a heading.
+
+\section*{Block Style (No Indent, With Spacing)}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+
+This paragraph has no indent but has vertical space after it.
+
+This is the next paragraph, separated by vertical space instead of indent.
+
+\end{document}

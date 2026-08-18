@@ -1,0 +1,15 @@
+# PDF — not public yet
+*.pdf
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.glo
+*.ist
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg

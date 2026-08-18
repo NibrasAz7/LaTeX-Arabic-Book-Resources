@@ -1,0 +1,61 @@
+% !TEX program = xelatex
+% Example: Beamer with the Metropolis theme
+% Demonstrates a modern minimal theme with section pages, a progress bar,
+% and content frames. Requires the metropolis package and Fira Sans.
+\documentclass{beamer}
+\usetheme[progressbar=frametitle, numbering=fraction,
+          sectionpage=progressbar, subsectionpage=progressbar]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\title{Modern Talks with Metropolis}
+\subtitle{A Clean, Minimal Beamer Theme}
+\author{Dr.~Grace Hopper}
+\institute{Institute of Computing}
+\date{2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Design Principles}
+
+\begin{frame}{Why Metropolis?}
+  \begin{itemize}
+    \item Minimal chrome, generous whitespace.
+    \item Frame-title progress bar keeps the audience oriented.
+    \item Section pages act as visual breaks.
+  \end{itemize}
+\end{frame}
+
+\section{Features}
+
+\begin{frame}{Theme Options Used}
+  \begin{description}
+    \item[progressbar] shown at the frame title.
+    \item[numbering] displayed as a fraction (e.g.\ 3/8).
+    \item[sectionpage] rendered as a progress bar.
+  \end{description}
+\end{frame}
+
+\begin{frame}{A Content Frame}
+  The progress bar below the title fills as the talk advances.
+  \pause
+  This frame has two overlay states thanks to \texttt{\textbackslash pause}.
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}{Takeaways}
+  Metropolis pairs well with restrained content:
+  \begin{itemize}
+    \item One idea per frame.
+    \item Few bullets, large margins.
+    \item Let the progress bar do the navigation.
+  \end{itemize}
+\end{frame}
+
+\end{document}

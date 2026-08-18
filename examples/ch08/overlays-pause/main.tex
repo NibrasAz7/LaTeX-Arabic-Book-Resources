@@ -1,0 +1,45 @@
+% !TEX program = xelatex
+% Example: Overlays with \pause and \onslide
+% First frame reveals bullets one at a time with \pause.
+% Second frame uses \onslide<2-> to control visibility by overlay number.
+\documentclass{beamer}
+\usetheme{default}
+
+\title{Overlays and Animations}
+\author{Dr.~Richard Feynman}
+\institute{Caltech}
+\date{2025}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Revealing with \texttt{\textbackslash pause}}
+  Each bullet appears on a new overlay:
+  \begin{itemize}
+    \item First, we state the problem.
+    \pause
+    \item Then, we introduce the method.
+    \pause
+    \item Next, we present the result.
+    \pause
+    \item Finally, we discuss the implications.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Revealing with \texttt{\textbackslash onslide}}
+  \onslide<1->{This text is visible from slide 1 onward.}
+  \vspace{0.5em}
+
+  \onslide<2->{This text appears starting at overlay 2.}
+  \vspace{0.5em}
+
+  \onslide<3->{This text appears starting at overlay 3.}
+  \vspace{0.5em}
+
+  \onslide<2->{Note: the second line was hidden, then revealed.}
+\end{frame}
+
+\end{document}

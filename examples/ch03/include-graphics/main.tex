@@ -1,0 +1,20 @@
+% !TEX program = xelatex
+% Example: Including graphics with graphicx
+\documentclass[11pt, a4paper]{article}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+\begin{document}
+
+\section*{إدراج الصور}
+
+% صورة بعرض نصف صفحة
+\includegraphics[width=0.5\textwidth]{example-image}
+
+% صورة بدوران 90 درجة
+\includegraphics[angle=90, width=3cm]{example-image}
+
+% صورة مع الحفاظ على النسبة
+\includegraphics[width=0.8\textwidth, height=0.3\textheight, keepaspectratio]{example-image}
+
+\end{document}

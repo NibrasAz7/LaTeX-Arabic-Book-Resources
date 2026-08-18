@@ -1,0 +1,59 @@
+% Example: Long table spanning multiple pages using longtable
+% Demonstrates a table that breaks across pages with repeating headers and footers.
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\newfontfamily\englishfont{Latin Modern Roman}
+\usepackage{longtable}
+\begin{document}
+\begin{english}
+
+\section*{Longtable Example}
+
+\begin{longtable}{|l|c|r|}
+  \hline
+  \textbf{Item} & \textbf{Quantity} & \textbf{Price} \\
+  \hline
+  \endfirsthead
+
+  \multicolumn{3}{c}{\textit{Continued from previous page}} \\
+  \hline
+  \textbf{Item} & \textbf{Quantity} & \textbf{Price} \\
+  \hline
+  \endhead
+
+  \hline
+  \multicolumn{3}{r}{\textit{Continued on next page}} \\
+  \hline
+  \endfoot
+
+  \hline
+  \endlastfoot
+
+  Apple    & 10 & 2.50  \\
+  Banana   & 15 & 1.75  \\
+  Cherry   & 8  & 3.00  \\
+  Date     & 20 & 0.80  \\
+  Elderberry & 5 & 4.50  \\
+  Fig      & 12 & 2.20  \\
+  Grape    & 30 & 1.10  \\
+  Honeydew & 3  & 5.00  \\
+  Kiwi     & 14 & 1.90  \\
+  Lemon    & 25 & 0.60  \\
+  Mango    & 7  & 3.50  \\
+  Nectarine & 9 & 2.80  \\
+  Orange   & 18 & 1.30  \\
+  Peach    & 11 & 2.40  \\
+  Quince   & 4  & 3.70  \\
+  Raspberry & 22 & 2.10  \\
+  Strawberry & 16 & 2.60  \\
+  Tomato   & 19 & 1.40  \\
+  Ugli fruit & 2 & 4.20  \\
+  Watermelon & 1 & 6.00  \\
+\end{longtable}
+
+\end{english}
+\end{document}

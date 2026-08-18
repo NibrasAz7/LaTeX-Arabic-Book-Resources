@@ -1,0 +1,96 @@
+% !TEX program = xelatex
+% Example: Scientific poster with the beamerposter package
+% Uses an A0 portrait layout with a three-column block arrangement.
+\documentclass[final]{beamer}
+\usepackage[size=a0, scale=1.4, orientation=portrait]{beamerposter}
+\usepackage{tikz}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+% Block styling for poster boxes
+\setbeamertemplate{block begin}{
+  \begin{beamercolorbox}[ht=2.8ex, dp=1.2ex, leftskip=0.5cm, rightskip=0.5cm]{block title}
+    \usebeamerfont*{block title}\large\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[dp=1ex, leftskip=0.5cm, rightskip=0.5cm]{block body}
+    \usebeamerfont*{block body}\large
+}
+\setbeamertemplate{block end}{
+  \end{beamercolorbox}\vspace{0.5ex}
+}
+
+\title{Efficient Algorithms for Large-Scale Graph Analysis}
+\author{Dr.~Alan Turing \quad Dr.~Grace Hopper}
+\institute{Institute of Computing, University of Example}
+\date{2025}
+
+\begin{document}
+\begin{frame}[t]
+
+% Title banner
+\begin{beamercolorbox}[wd=\paperwidth, sep=1cm, center]{title}
+  {\veryhuge\textbf{Efficient Algorithms for Large-Scale Graph Analysis}}\\[0.5cm]
+  {\large Dr.~Alan Turing \quad Dr.~Grace Hopper}\\[0.2cm]
+  {\normalsize Institute of Computing, University of Example \quad\textbar\quad 2025}
+\end{beamercolorbox}
+\vspace{1cm}
+
+\begin{columns}[t]
+
+\begin{column}{0.31\paperwidth}
+  \begin{block}{Introduction}
+    Graph-structured data appears in social networks, biology,
+    and transportation. We study scalable algorithms for
+    community detection and shortest-path queries on graphs
+    with millions of nodes.
+  \end{block}
+
+  \begin{block}{Motivation}
+    \begin{itemize}
+      \item Real-world graphs are large and sparse.
+      \item Exact solutions are often too slow.
+      \item Approximate methods trade accuracy for speed.
+    \end{itemize}
+  \end{block}
+\end{column}
+
+\begin{column}{0.31\paperwidth}
+  \begin{block}{Method}
+    We propose a two-phase approach:
+    \begin{enumerate}
+      \item Coarsen the graph by merging similar nodes.
+      \item Solve on the coarse graph, then refine.
+    \end{enumerate}
+    The refinement step uses a local search bounded by
+    a radius parameter $r$.
+  \end{block}
+
+  \begin{block}{Complexity}
+    The running time is
+    \[
+      O\!\left(\frac{n \log n}{r}\right),
+    \]
+    compared to $O(n^2)$ for the naive baseline.
+  \end{block}
+\end{column}
+
+\begin{column}{0.31\paperwidth}
+  \begin{block}{Results}
+    \begin{itemize}
+      \item 12$\times$ speedup on road networks.
+      \item Within 3\% of the exact solution on average.
+      \item Scales to 10M nodes on a single machine.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Conclusion}
+    The coarsen-and-refine strategy offers a favorable
+    accuracy--speed trade-off for large graph problems.
+    Future work will extend the method to dynamic graphs.
+  \end{block}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+\end{document}

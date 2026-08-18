@@ -1,0 +1,146 @@
+% !TEX program = xelatex
+% Example: Complete thesis template with frontmatter, mainmatter, appendix, backmatter
+% Demonstrates the standard structure of a university thesis using report class.
+% Compile with: xelatex main.tex (twice for cross-references)
+
+\documentclass[12pt, a4paper]{report}
+
+% Essential packages
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\newfontfamily\englishfont{Latin Modern Roman}
+
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\usepackage{imakeidx}
+\makeindex
+
+% Dummy bibliography entries
+\usepackage{filecontents}
+\begin{filecontents*}{refs.bib}
+@book{knuth1984,
+  author = {Donald E. Knuth},
+  title = {The TeXbook},
+  publisher = {Addison-Wesley},
+  year = {1984}
+}
+@book{lamport1994,
+  author = {Leslie Lamport},
+  title = {LaTeX: A Document Preparation System},
+  publisher = {Addison-Wesley},
+  year = {1994}
+}
+\end{filecontents*}
+\addbibresource{refs.bib}
+
+\begin{document}
+
+%========== FRONTMATTER ==========
+\frontmatter
+
+\chapter*{صفحةُ العنوان}
+\begin{center}
+\vspace{2cm}
+{\Large \textbf{عنوانُ الأطروحةِ هنا}}\\[1cm]
+{\large اسمُ الباحث}\\[0.5cm]
+{\large المُشرف: د. اسمُ المُشرف}\\[0.5cm]
+{\large جامعةُ ... - قسمُ ...}\\[0.5cm]
+{\large 2025}
+\end{center}
+
+\clearpage
+
+\chapter*{الإهدار}
+\begin{center}
+إلى عائلتي وأصدقائي...
+\end{center}
+
+\clearpage
+
+\chapter*{الشكرُ والتقدير}
+أشكرُ مُشرفي على دعمهِ وتوجيهاتهِ القيّمة. كما أشكرُ زملاءَ البحثِ على التعاون.
+
+\clearpage
+
+\chapter*{الملخص}
+هذا الملخصُ يَلخّصُ المشكلةَ والمنهجَ والنتائجَ في 150 إلى 350 كلمة. يُوضعُ هنا نصُّ الملخص.
+
+\clearpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%========== MAINMATTER ==========
+\mainmatter
+
+\chapter{المُقدّمة}
+\section{خلفيةُ البحث}
+هذا الفصلُ يُقدّمُ خلفيةَ البحث. نُشيرُ إلى المرجعِ \textcite{knuth1984}.
+
+\section{أهدافُ البحث}
+الأهدافُ الرئيسةُ لهذا البحث...
+
+\chapter{مراجعةُ الأدبيات}
+\section{الدراساتُ السابقة}
+مراجعةُ الأبحاثِ السابقةِ في المجال. نُشيرُ إلى \textcite{lamport1994}.
+
+\chapter{المنهجية}
+\section{تصميمُ البحث}
+وصفُ المنهجِ المُتّبع.
+
+\chapter{النتائج}
+\section{النتائجُ الرئيسة}
+عرضُ النتائجِ معَ الأشكالِ والجداول.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox{8cm}{\centering [Figure placeholder]}}
+\caption{نتيجةٌ تجريبية}
+\label{fig:result}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lc}
+\toprule
+المُتغيّر & القيمة \\
+\midrule
+الدقة & 95.2\% \\
+الزمن & 1.3 ثانية \\
+\bottomrule
+\end{tabular}
+\caption{نتائجُ الأداء}
+\label{tab:results}
+\end{table}
+
+\chapter{المناقشة}
+\section{تفسيرُ النتائج}
+كما نَرى في الشكلِ \ref{fig:result} والجدولِ \ref{tab:results}، النتائجُ تَدعمُ الفرضية.
+
+\chapter{الخاتمة}
+\section{الخلاصةُ والتوصيات}
+خلاصةُ البحثِ والتوصياتُ المستقبلية.
+
+%========== APPENDIX ==========
+\appendix
+
+\chapter{بياناتٌ إضافية}
+هذا الملحقُ يَحتوي على بياناتٍ تكميلية.
+
+\chapter{شفراتٌ برمجية}
+هذا الملحقُ يَحتوي على الشفراتِ المُستخدمة.
+
+%========== BACKMATTER ==========
+\backmatter
+
+\printbibliography
+\printindex
+
+\end{document}

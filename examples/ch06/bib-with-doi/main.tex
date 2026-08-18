@@ -1,0 +1,40 @@
+% BibLaTeX with DOI and URL example: demonstrates biblatex entries that
+% include DOI and URL fields. The bibliography output shows clickable
+% DOI links and URLs. The .bib file is embedded via filecontents*.
+% Compile with: xelatex main.tex -> biber main -> xelatex main -> xelatex main
+\documentclass[11pt]{article}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\usepackage{filecontents}
+\begin{filecontents*}{refs.bib}
+@article{doiexample2020,
+  author  = {Jane Doe and John Smith},
+  title   = {Advances in Computational Linguistics},
+  journal = {Journal of Computer Science},
+  year    = {2020},
+  volume  = {15},
+  number  = {3},
+  pages   = {45--67},
+  doi     = {10.1234/jcs.2020.01503},
+  url     = {https://doi.org/10.1234/jcs.2020.01503}
+}
+@online{urlexample,
+  author = {Open Access Initiative},
+  title  = {Free Resources for Researchers},
+  year   = {2021},
+  url    = {https://example.org/free-resources},
+  urldate = {2023-01-15}
+}
+\end{filecontents*}
+\addbibresource{refs.bib}
+\begin{document}
+
+\section*{BibLaTeX with DOI and URL Example}
+
+This document demonstrates biblatex entries with DOI and URL fields.
+The article \textcite{doiexample2020} includes a DOI that renders as a
+clickable link in the bibliography. The online resource \parencite{urlexample}
+shows how URL fields are displayed.
+
+\printbibliography
+
+\end{document}

@@ -1,0 +1,30 @@
+% !TEX program = xelatex
+% Example: Redefining built-in names with \renewcommand
+% Demonstrates changing \contentsname and \refname to custom text.
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+
+% Rename the table of contents heading
+\renewcommand{\contentsname}{Outline of Contents}
+
+% Rename the references heading (article class uses \refname)
+\renewcommand{\refname}{Sources Cited}
+
+\begin{document}
+
+\tableofcontents
+
+\section{First Section}
+This document has renamed headings.
+
+\section{Second Section}
+The table of contents above uses the custom name
+``Outline of Contents'' instead of the default ``Contents''.
+
+\begin{thebibliography}{9}
+  \bibitem{knuth} Donald E.\ Knuth, \emph{The \TeX book}, 1984.
+  \bibitem{lamport} Leslie Lamport, \emph{\LaTeX: A Document
+    Preparation System}, 1994.
+\end{thebibliography}
+
+\end{document}

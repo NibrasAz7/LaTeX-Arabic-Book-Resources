@@ -1,0 +1,54 @@
+% !TEX program = xelatex
+% Example: Math content in Beamer
+% Demonstrates an equation revealed step by step with \pause, and a
+% theorem block using Beamer's built-in theorem environments.
+\documentclass{beamer}
+\usetheme{default}
+
+\title{Mathematics in Beamer}
+\author{Dr.~Emmy Noether}
+\institute{University of Erlangen}
+\date{2025}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Deriving the Quadratic Formula}
+  Start from the general quadratic equation:
+  \[
+    ax^2 + bx + c = 0, \quad a \neq 0.
+  \]
+  \pause
+  Divide through by $a$ and complete the square:
+  \[
+    x^2 + \frac{b}{a}x = -\frac{c}{a}
+    \;\Longrightarrow\;
+    \left(x + \frac{b}{2a}\right)^2 = \frac{b^2 - 4ac}{4a^2}.
+  \]
+  \pause
+  Take the square root and solve for $x$:
+  \[
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+  \]
+\end{frame}
+
+\begin{frame}{A Theorem Block}
+  \begin{theorem}[Pythagoras]
+    In a right triangle with legs $a, b$ and hypotenuse $c$,
+    \[
+      a^2 + b^2 = c^2.
+    \]
+  \end{theorem}
+
+  \begin{proof}
+    By the geometric rearrangement of four congruent triangles
+    inside a square of side $a + b$, the unshaded area equals
+    $c^2$, and also equals $(a+b)^2 - 4\cdot\tfrac{1}{2}ab
+    = a^2 + b^2$.
+  \end{proof}
+\end{frame}
+
+\end{document}

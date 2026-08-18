@@ -1,0 +1,54 @@
+% !TEX program = xelatex
+% Arabic document showing both Arabic-Indic numerals (٠-٩)
+% and Western numerals (0-9) side by side.
+% Demonstrates how to switch between numeral systems.
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+\begin{document}
+
+\title{الأرقامُ في النصِّ العربيّ}
+\author{د. نبراس أبو الذهب}
+\date{2025}
+\maketitle
+
+\section{الأرقامُ العربيةُ الهنديةُ والأرقامُ الغربية}
+
+يَستخدمُ العربُ نظامينِ من الأرقامِ: الأرقامَ العربيةَ الهنديةَ
+(المشرقية) والأرقامَ الغربيةَ (المغربية). يَتبيّنُ الفرقُ في الجدولِ أدناه.
+
+\subsection{مقارنةُ الأرقام}
+
+\begin{tabular}{|c|c|c|}
+\hline
+\LR{Western} & \LR{Arabic-Indic} & الرقم \\
+\hline
+0 & ٠ & صفر \\
+1 & ١ & واحد \\
+2 & ٢ & اثنان \\
+3 & ٣ & ثلاثة \\
+4 & ٤ & أربعة \\
+5 & ٥ & خمسة \\
+6 & ٦ & ستة \\
+7 & ٧ & سبعة \\
+8 & ٨ & ثمانية \\
+9 & ٩ & تسعة \\
+\hline
+\end{tabular}
+
+\subsection{التبديلُ بين النظامين}
+
+لعرضِ الأرقامِ الغربيةِ داخلَ النصِّ العربيّ، نَستخدمُ الأمرَ \LR{\textbackslash LR\{\}}
+مثل: \LR{2025} بدلاً من ٢٠٢٥.
+
+كما يُمكنُ تَحديدُ نظامِ الأرقامِ عندَ إعدادِ اللغةِ عبرَ خيار
+\LR{numerals=arabicdigits} أو \LR{numerals=maghrib} في
+\LR{\textbackslash setmainlanguage}.
+
+\end{document}

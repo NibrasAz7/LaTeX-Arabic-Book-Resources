@@ -1,0 +1,33 @@
+% !TEX program = xelatex
+% Example 2.3: Text formatting commands
+% Chapter 2, Section 2.3
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+
+\begin{document}
+
+\section*{Basic Formatting}
+\textbf{Bold text} for emphasis. \\
+\textit{Italic text} for foreign words. \\
+\texttt{Monospace text} for code. \\
+\underline{Underlined text} (use sparingly).
+
+\section*{Emphasis vs Italic}
+Normal text with \emph{emphasis}. \\
+\textit{Italic text with \emph{emphasis} (switches to upright)}. \\
+\textbf{Bold text with \emph{emphasis} (switches to italic)}.
+
+\section*{Font Shapes}
+\textup{Upright text} (normal). \\
+\textit{Italic text}. \\
+\textsl{Slanted text}. \\
+\textsc{Small Caps Text}.
+
+\section*{Combinations}
+\textbf{\textit{Bold italic}}. \\
+\textbf{\textsc{Bold small caps}}. \\
+\textit{\textsc{Italic small caps}}.
+
+\end{document}

@@ -1,0 +1,34 @@
+% Inline bibliography example: demonstrates a manual bibliography using the
+% thebibliography environment with \bibitem entries. No external .bib file
+% or biber/bibtex run is needed --- everything is self-contained.
+% Compile with: xelatex main.tex (run twice for correct references)
+\documentclass[11pt]{article}
+\begin{document}
+
+\section*{Inline Bibliography Example}
+
+This document demonstrates a manual bibliography built with the
+\texttt{thebibliography} environment. No external file is needed.
+Reference~\cite{ref1} discusses quantum mechanics, while reference~\cite{ref2}
+covers general relativity.
+
+\begin{thebibliography}{9}
+
+\bibitem{ref1}
+Dirac, P. A. M.
+\textit{The Principles of Quantum Mechanics}.
+Oxford University Press, 1930.
+
+\bibitem{ref2}
+Einstein, A.
+\textit{The Meaning of Relativity}.
+Princeton University Press, 1922.
+
+\bibitem{ref3}
+Feynman, R. P.
+``Space-Time Approach to Non-Relativistic Quantum Mechanics.''
+\textit{Reviews of Modern Physics}, 20(2):367--387, 1948.
+
+\end{thebibliography}
+
+\end{document}

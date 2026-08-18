@@ -1,0 +1,49 @@
+% !TEX program = xelatex
+% Example: Document structure with frontmatter, mainmatter, appendix, backmatter
+% Demonstrates the report-class division commands that switch page
+% numbering and sectioning behavior.
+\documentclass[12pt]{report}
+\usepackage{hyperref}
+
+\begin{document}
+
+% --- Front matter: roman page numbering, chapters not numbered ---
+\frontmatter
+\title{Sample Thesis}
+\author{A.\ Researcher}
+\date{2025}
+\maketitle
+
+\chapter*{Abstract}
+This is the abstract of the thesis, placed in the front matter.
+
+\tableofcontents
+
+% --- Main matter: arabic page numbering, chapters numbered ---
+\mainmatter
+\chapter{Introduction}
+This is the first numbered chapter of the main matter.
+
+\section{Background}
+Some background information.
+
+\chapter{Methods}
+This chapter describes the methods used.
+
+\section{Data}
+Details about the data.
+
+% --- Appendix: chapters lettered A, B, C, ... ---
+\appendix
+\chapter{Supplementary Data}
+Appendix chapters are lettered: this is Appendix~A.
+
+\chapter{Code Listings}
+This is Appendix~B.
+
+% --- Back matter: unnumbered chapters, special sections ---
+\backmatter
+\chapter*{Acknowledgments}
+Thanks to everyone who helped.
+
+\end{document}

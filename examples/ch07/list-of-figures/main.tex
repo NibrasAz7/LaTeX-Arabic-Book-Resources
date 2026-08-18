@@ -1,0 +1,61 @@
+% !TEX program = xelatex
+% Example: List of figures and list of tables
+% Demonstrates \listoffigures and \listoftables with two figures
+% and two tables, each with captions and labels.
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\begin{document}
+
+\listoffigures
+\listoftables
+
+\section{Figures}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{example-image}
+  \caption{First sample figure}
+  \label{fig:first}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{example-image-a}
+  \caption{Second sample figure}
+  \label{fig:second}
+\end{figure}
+
+\section{Tables}
+
+\begin{table}[htbp]
+  \centering
+  \caption{First sample table}
+  \label{tab:first}
+  \begin{tabular}{lr}
+    \toprule
+    Item & Value \\
+    \midrule
+    A    & 10    \\
+    B    & 20    \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Second sample table}
+  \label{tab:second}
+  \begin{tabular}{lr}
+    \toprule
+    Item & Value \\
+    \midrule
+    X    & 100   \\
+    Y    & 200   \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\end{document}

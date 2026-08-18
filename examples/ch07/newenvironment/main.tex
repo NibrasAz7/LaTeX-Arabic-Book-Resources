@@ -1,0 +1,37 @@
+% !TEX program = xelatex
+% Example: Custom environment with \newenvironment
+% Demonstrates creating a "notebox" environment using tcolorbox
+% that wraps text in a colored, titled box.
+\documentclass[11pt]{article}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+% Custom environment with one optional argument (the title)
+\newenvironment{notebox}[1][Note]
+{%
+  \begin{tcolorbox}[
+    colback=blue!5,
+    colframe=blue!60!black,
+    title=#1,
+    fonttitle=\bfseries,
+  ]
+}
+{%
+  \end{tcolorbox}
+}
+
+\begin{document}
+
+\section{Custom Environments}
+
+\begin{notebox}
+  This is a note inside the custom \texttt{notebox} environment.
+  The default title is ``Note''.
+\end{notebox}
+
+\begin{notebox}[Important Warning]
+  This box uses the optional argument to set a custom title.
+  You can put any text or math inside: $E = mc^2$.
+\end{notebox}
+
+\end{document}
