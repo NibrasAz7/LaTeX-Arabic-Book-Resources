@@ -1,0 +1,60 @@
+% !TEX program = xelatex
+% Example: Typesetting Quranic verses with the quran package
+% Compile with: xelatex main.tex (twice for cross-references)
+% Requires: quran package (tlmgr install quran)
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+% Load quran with English translation and transliteration:
+\usepackage[trans=en,translt]{quran}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{تنضيدُ الآياتِ القرآنية بـ\LR{LaTeX}}
+\author{مثالٌ توضيحيّ}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{آيةٌ مفردة}
+
+أولُ آيةٍ من سورةِ الفاتحة:
+
+\quranayah[1][1]
+
+\section{سورةٌ كاملة}
+
+سورةُ الإخلاص:
+
+\quransurah[112]
+
+\section{جزءٌ (جزء عمَّ)}
+
+الجزءُ الثلاثون:
+
+\quranjuz[30]
+
+\section{ترجمةٌ إنجليزية}
+
+English translation of Surah Al-Ikhlas:
+
+\quransurahen[112]
+
+\section{النقلُ الصوتي}
+
+English transliteration of Surah Al-Ikhlas:
+
+\quransurahlt[112]
+
+\section{اسمُ سورة}
+
+اسمُ السورةِ الأولى: \surahname[1]
+
+\end{document}

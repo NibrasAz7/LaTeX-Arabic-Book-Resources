@@ -1,0 +1,48 @@
+% !TEX program = xelatex
+% Example: Typesetting Hadith text with the hadith package
+% Compile with: xelatex main.tex (twice for cross-references)
+% Requires: hadith package (tlmgr install hadith)
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+% Load hadith with Bukhari and Muslim, show grade and translation:
+\usepackage[bukhari,muslim,showgrade,showtrans]{hadith}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{تنضيدُ الحديثِ الشريف بـ\LR{LaTeX}}
+\author{مثالٌ توضيحيّ}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{حديثٌ من صحيحِ البخاري}
+
+الحديثُ الأولُ من صحيحِ البخاري:
+
+\hadith[bukhari][1]
+
+\section{اختصارٌ للكتبِ المعروفة}
+
+باستخدامِ الاختصار:
+
+\hadithbukhari{1}
+
+\hadithmuslim{1}
+
+\section{اسمُ المجموعة}
+
+اسمُ مجموعةِ البخاري: \hadithname{bukhari}
+
+\section{استشهاد}
+
+استشهادٌ مُضمّن: \hadithcite[bukhari][1]
+
+\end{document}
