@@ -1,4 +1,8 @@
-Add chapter 9 example: github-push
+Add chapter 10 examples: Arabic typesetting and RTL
+
+8 example files: basic-arabic, arabic-fonts, tashkeel-demo,
+arabic-numbers, bilingual-doc, arabdoc-example, arabic-table,
+arabic-beamer-rtl
 
 Generated with [Devin](https://devin.ai)
 
