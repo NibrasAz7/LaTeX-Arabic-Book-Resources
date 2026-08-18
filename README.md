@@ -30,24 +30,18 @@ This repository contains the companion resources and code examples for the book 
 ```
 LaTeX-Arabic-Book-Resources/
 ├── examples/
-│   ├── ch01/          # الفصل 1: أساسيات LaTeX
-│   │   ├── hello-world/
-│   │   ├── first-arabic/
-│   │   ├── template-switch/
-│   │   ├── compilation-sequence/
-│   │   └── vscode-settings/
-│   └── ch02/          # الفصل 2: التنضيد الطباعي والخطوط
-│       ├── fontspec-basic/
-│       ├── font-families/
-│       ├── text-formatting/
-│       ├── font-sizes/
-│       ├── colors/
-│       ├── text-alignment/
-│       ├── paragraph-spacing/
-│       ├── lists-basic/
-│       ├── lists-enumitem/
-│       ├── bilingual-setup/
-│       └── special-characters/
+│   ├── ch01/          # الفصل 1: أساسيات LaTeX (5 أمثلة)
+│   ├── ch02/          # الفصل 2: التنضيد الطباعي (11 مثال)
+│   ├── ch03/          # الفصل 3: الأشكال والمخططات (8 أمثلة)
+│   ├── ch04/          # الفصل 4: الجداول (6 أمثلة)
+│   ├── ch05/          # الفصل 5: الرياضيات (8 أمثلة)
+│   ├── ch06/          # الفصل 6: المراجع (5 أمثلة)
+│   ├── ch07/          # الفصل 7: بنية المستند (7 أمثلة)
+│   ├── ch08/          # الفصل 8: العروض التقديمية (8 أمثلة)
+│   ├── ch09/          # الفصل 9: سير العمل (5 أمثلة)
+│   ├── ch10/          # الفصل 10: التنضيد العربي (8 أمثلة)
+│   ├── ch11/          # الفصل 11: النشر (11 مثال)
+│   └── appendixA/     # الملحق أ: تمارين (28 تمرين)
 ├── LaTeX-Arabic-Book.pdf   # النسخة المُصنّفة (قريباً)
 ├── README.md
 └── LICENSE
@@ -61,15 +55,16 @@ LaTeX-Arabic-Book-Resources/
 |-------|---------|-------------|
 | 1 | أساسيات LaTeX | 5 |
 | 2 | التنضيد الطباعي والخطوط متعددة اللغات | 11 |
-| 3 | الأشكال والمخططات والتواصل البصري | قريباً |
-| 4 | الجداول وعرض البيانات | قريباً |
-| 5 | تنضيد الرياضيات | قريباً |
-| 6 | المراجع وإدارة الاستشهادات | قريباً |
-| 7 | بنية المستند والإحالات المتقاطعة | قريباً |
-| 8 | العروض التقديمية بـ Beamer | قريباً |
-| 9 | سير العمل الحديث | قريباً |
-| 10 | التنضيد العربي والكتابة من اليمين إلى اليسار | قريباً |
-| 11 | سير عمل النشر والتقديم للمجلات | قريباً |
+| 3 | الأشكال والمخططات والتواصل البصري | 8 |
+| 4 | الجداول وعرض البيانات | 6 |
+| 5 | تنضيد الرياضيات | 8 |
+| 6 | المراجع وإدارة الاستشهادات | 5 |
+| 7 | بنية المستند والإحالات المتقاطعة | 7 |
+| 8 | العروض التقديمية بـ Beamer | 8 |
+| 9 | سير العمل الحديث | 5 |
+| 10 | التنضيد العربي والكتابة من اليمين إلى اليسار | 8 |
+| 11 | سير عمل النشر والتقديم للمجلات | 11 |
+| أ | التمارين والمختبرات | 28 |
 
 ---
 
@@ -92,6 +87,20 @@ xelatex main.tex
 ```
 
 > **ملاحظة:** جميع الأمثلة تتطلب **XeLaTeX** (وليس pdfLaTeX) لدعم الخطوط العربية.
+
+### فتح الأمثلة في Overleaf | Open in Overleaf
+
+يمكنك فتح أي مثال مباشرة في Overleaf دون تحميل:
+
+**لمثال واحد:**
+```
+https://www.overleaf.com/docs?snip_uri=https://raw.githubusercontent.com/NibrasAz7/LaTeX-Arabic-Book-Resources/main/examples/appendixA/ex01-first-document/main.tex&engine=xelatex
+```
+
+**للمشروع الكامل (ZIP):**
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/docs?snip_uri=https://github.com/NibrasAz7/LaTeX-Arabic-Book-Resources/archive/refs/heads/main.zip&engine=xelatex)
+
+> **تلميح:** استخدم `&engine=xelatex` في الرابط لضمان استخدام المصرّف الصحيح للنصوص العربية.
 
 ---
 

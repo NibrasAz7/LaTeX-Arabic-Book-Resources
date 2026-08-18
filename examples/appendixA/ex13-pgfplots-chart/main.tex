@@ -1,0 +1,15 @@
+﻿\documentclass{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\setmainlanguage{arabic}
+\setmainfont{Amiri}
+\begin{document}
+\section{رسم بياني}
+\begin{tikzpicture}
+\begin{axis}
+\addplot coordinates {(1,2) (2,4) (3,6) (4,8)};
+\end{axis}
+\end{tikzpicture}
+\end{document}
