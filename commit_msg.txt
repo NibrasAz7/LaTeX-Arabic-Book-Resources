@@ -1,0 +1,9 @@
+Add chapter 8 examples: Beamer presentations
+
+- 11 example files: basic-frame, metropolis-theme, themes-comparison,
+  columns-layout, overlays-pause, beamer-math, beamer-code, beamer-tikz,
+  widescreen-16-9, beamer-poster, arabic-beamer
+
+Generated with [Devin](https://devin.ai)
+
+Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>

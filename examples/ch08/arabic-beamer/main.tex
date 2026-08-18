@@ -1,0 +1,31 @@
+% !TEX program = xelatex
+% Example: Arabic Beamer presentation with RTL support
+% Uses polyglossia with Arabic as the default language and English as the
+% other language. Demonstrates that bidi works with Beamer for right-to-left
+% slides. Arabic content is kept minimal: a title, one frame title, one bullet.
+\documentclass{beamer}
+\usetheme{default}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+\title{مقدمة في العروض التقديمية}
+\author{الدكتور أحمد}
+\institute{جامعة المثال}
+\date{٢٠٢٥}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{العنوان الأول}
+  \begin{itemize}
+    \item هذه نقطة واحدة باللغة العربية.
+  \end{itemize}
+\end{frame}
+
+\end{document}
