@@ -1,0 +1,94 @@
+% !TEX program = pdflatex
+% Example: Response to reviewers letter
+% Compile with: pdflatex main.tex
+
+\documentclass[11pt, a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\newcommand{\reviewer}[1]{\section*{Reviewer #1}}
+\newcommand{\comment}[1]{\noindent\textbf{Comment:} #1\par}
+\newcommand{\response}[1]{\noindent\textbf{Response:} #1\par\vspace{1em}}
+
+\begin{document}
+
+\title{Response to Reviewers\\[0.5em]
+\large Manuscript ID: JSP-2024-0123}
+\author{Author Name}
+\date{\today}
+\maketitle
+
+We thank the reviewers for their constructive feedback.
+Below, we address each comment point by point.
+Changes in the revised manuscript are highlighted in blue.
+
+\reviewer{1}
+
+\comment{The methodology section lacks detail on the
+preprocessing steps. Please clarify how the signals
+were filtered and normalized.}
+
+\response{We have expanded Section 3.1 to include a
+detailed description of the preprocessing pipeline.
+Specifically, we now describe: (1) bandpass filtering
+at 0.5--50 Hz using a 4th-order Butterworth filter,
+(2) z-score normalization per channel, and (3) artifact
+rejection using threshold-based amplitude criteria.
+The revised text is on page 5, lines 120--140.}
+
+\comment{Figure 2 is difficult to read. Please improve
+the resolution and font sizes.}
+
+\response{We have regenerated Figure 2 at 300 DPI with
+larger font sizes (12pt instead of 8pt) for better
+readability. We also added axis labels that were
+missing in the original submission.}
+
+\reviewer{2}
+
+\comment{The comparison with state-of-the-art methods
+is incomplete. Please add comparison with the method
+proposed in [Smith et al., 2023].}
+
+\response{We thank the reviewer for this suggestion.
+We have added a comparison with Smith et al. (2023)
+in Table 2. Our method achieves 93.7\% accuracy
+compared to 91.2\% for Smith et al., while using
+40\% fewer parameters. The discussion of this
+comparison is in Section 4.3, page 9.}
+
+\comment{The statistical significance of the results
+is not reported. Please include p-values or confidence
+intervals.}
+
+\response{We have added 95\% confidence intervals to
+all results in Table 2, computed using bootstrap
+resampling with 1000 iterations. We also added
+paired t-test p-values comparing our method with
+each baseline. All comparisons are statistically
+significant (p < 0.01).}
+
+\reviewer{3}
+
+\comment{The paper would benefit from a discussion
+of limitations and future work.}
+
+\response{We have added a new Section 5.4 ``Limitations
+and Future Work'' that discusses: (1) the computational
+cost of the multi-scale architecture, (2) the need for
+larger datasets for generalization, and (3) potential
+extensions to real-time applications.}
+
+\vspace{1em}
+\noindent\textbf{Summary of changes:}
+\begin{itemize}
+\item Expanded preprocessing description (Section 3.1).
+\item Improved Figure 2 resolution and labels.
+\item Added comparison with Smith et al. (2023) in Table 2.
+\item Added confidence intervals and p-values to Table 2.
+\item New Section 5.4 on limitations and future work.
+\end{itemize}
+
+\end{document}

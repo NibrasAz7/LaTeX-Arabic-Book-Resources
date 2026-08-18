@@ -1,0 +1,83 @@
+% !TEX program = pdflatex
+% Example: Thesis using report class
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+
+\documentclass[12pt, a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\begin{document}
+
+% ---- Front matter ----
+\title{Advanced Methods in Biomedical Signal Processing}
+\author{Author Name}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This thesis presents novel methods for biomedical signal
+processing with applications to brain-computer interfaces.
+We develop new algorithms for feature extraction and
+classification that improve performance across multiple
+datasets.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+% ---- Main matter ----
+\chapter{Introduction}
+\section{Motivation}
+Biomedical signal processing plays a crucial role in
+modern healthcare. This thesis addresses the challenge
+of extracting meaningful information from complex
+biological signals.
+
+\section{Contributions}
+The main contributions are:
+\begin{enumerate}
+\item A novel feature extraction method.
+\item An improved classification framework.
+\item Extensive evaluation on public datasets.
+\end{enumerate}
+
+\chapter{Literature Review}
+\section{Signal Processing Methods}
+Traditional methods include Fourier analysis, wavelet
+transforms, and empirical mode decomposition.
+
+\chapter{Methodology}
+\section{Proposed Framework}
+Our framework combines time-frequency analysis with
+deep learning architectures.
+
+\chapter{Results}
+\section{Experimental Setup}
+We evaluated our method on three public datasets.
+
+\section{Performance Analysis}
+Results show significant improvement over baseline methods.
+
+\chapter{Conclusion}
+We presented a comprehensive framework for biomedical
+signal processing. The proposed methods achieve
+state-of-the-art performance.
+
+% ---- Back matter ----
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\chapter{Mathematical Derivations}
+\section{Proof of Theorem 1}
+The proof follows from the properties of the wavelet
+transform and the Cauchy-Schwarz inequality.
+
+\end{document}

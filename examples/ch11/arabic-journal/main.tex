@@ -1,0 +1,82 @@
+% !TEX program = xelatex
+% Example: Arabic journal article template
+% Compile with: xelatex main.tex (twice for cross-references)
+% Requires: polyglossia, bidi, Amiri font
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+
+\title{عنوانُ الورقةِ البحثية}
+\author{اسمُ المؤلف \\
+القسمُ، الجامعة \\
+\LR{author@university.edu}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+الملخّصُ يَشملُ المشكلةَ والمنهجَ والنتائجِ الرئيسةَ في 150 إلى 250 كلمة.
+يَجبُ أنْ يُعطيَ القارئَ فكرةً كاملةً عنِ البحثِ دونَ قراءةِ الورقةِ كاملة.
+\end{abstract}
+
+\section{المقدمة}
+تُعدُّ معالجةُ الإشاراتِ البيوميدية\LR{} مجالاً حيوياً في الهندسةِ الطبية.
+تَهدفُ هذه الورقةُ إلى تقديمِ منهجيةٍ جديدةٍ لاستخراجِ الميزاتِ منْ إشاراتِ
+تخطيطِ الدماغِ الكهربائيِّ \LR{(EEG)}.
+
+\section{العملُ السابق}
+تَناولتْ دراساتٌ سابقةٌ استخراجَ الميزاتِ بطرقٍ تقليديةٍ مثلَ تحليلِ
+فورييه وتحليلِ المويجات. لكنَّ هذه الطرقَ تَعتمدُ على الخبرةِ اليدويةِ في
+اختيارِ الميزاتِ المناسبة.
+
+\section{المنهجية}
+نَقترحُ منهجيةً تَجمعُ بينَ التحليلِ الزمني-التردديِّ والتعلّمِ العميق.
+المعادلةُ الأساسيةُ للاستخراجِ هي:
+\begin{equation}
+\mathbf{f} = \text{CNN}(\text{CWT}(x(t)))
+\end{equation}
+حيثُ \(x(t)\) هيَ الإشارةُ الأصلية، و\(\text{CWT}\) هوَ تحويلُ المويجاتِ
+المستمر، و\(\text{CNN}\) هيَ الشبكةُ العصبيةُ الالتفافية.
+
+\section{النتائج}
+يُوضّحُ الجدولُ \ref{tab:results} مقارنةً بينَ المنهجيةِ المُقترحةِ والطرقِ التقليدية.
+
+\begin{table}[htbp]
+\caption{مقارنةُ دقةِ التصنيفِ بينَ الطرقِ المختلفة.}
+\label{tab:results}
+\centering
+\begin{tabular}{lc}
+\toprule
+\textbf{الطريقة} & \textbf{الدقة (\%)} \\
+\midrule
+تحليلُ فورييه & 78.5 \\
+تحليلُ المويجات & 85.2 \\
+المنهجيةُ المُقترحة & 93.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{المناقشة}
+تُظهرُ النتائجُ أنَّ المنهجيةَ المُقترحةَ تَتفوّقُ على الطرقِ التقليديةِ
+بنسبةِ 8.5\%. هذا التحسّنُ يَعودُ إلى قدرةِ الشبكةِ العصبيةِ على تعلّمِ
+الميزاتِ ذاتِ الصلةِ تلقائياً.
+
+\section{الخاتمة}
+قَدّمنا منهجيةً جديدةً لاستخراجِ الميزاتِ منْ إشاراتِ \LR{EEG} تَجمعُ
+بينَ تحليلِ المويجاتِ والتعلّمِ العميق. النتائجُ تُظهرُ تحسّناً ملحوظاً
+في دقةِ التصنيفِ مقارنةً بالطرقِ التقليدية.
+
+\end{document}

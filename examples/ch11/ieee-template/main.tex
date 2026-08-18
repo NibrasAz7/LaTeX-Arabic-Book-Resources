@@ -1,0 +1,67 @@
+% !TEX program = pdflatex
+% Example: IEEE journal article template
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: IEEEtran class (included in TeX Live / MiKTeX)
+
+\documentclass[journal]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+
+\begin{document}
+
+\title{A Novel Approach to Signal Processing Using Deep Learning}
+\author{Author~Name, \IEEEmembership{Member,~IEEE}}
+
+\maketitle
+
+\begin{abstract}
+This paper proposes a novel approach to signal processing
+using deep learning architectures. We demonstrate that
+convolutional neural networks can effectively extract
+features from raw signals without manual preprocessing.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Signal processing, deep learning, neural networks, feature extraction.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{S}{ignal} processing has traditionally relied
+on hand-crafted features and domain expertise. Recent advances
+in deep learning have shown that neural networks can learn
+relevant features directly from raw data~\cite{ref1}.
+
+\section{Methodology}
+We propose a multi-layer architecture consisting of
+convolutional layers followed by fully connected layers.
+The input signal $x(t)$ is processed through the network
+to produce an output $y = f(Wx + b)$.
+
+\section{Results}
+Table~\ref{tab:results} shows the performance comparison.
+
+\begin{table}[htbp]
+\caption{Performance comparison.}
+\label{tab:results}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Method & Accuracy & F1-Score \\
+\midrule
+Baseline & 85.2\% & 0.84 \\
+Proposed & 93.7\% & 0.93 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+We presented a novel deep learning approach that outperforms
+traditional methods by 8.5\% in accuracy.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

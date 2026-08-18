@@ -1,0 +1,75 @@
+% !TEX program = pdflatex
+% Example: ACM conference paper template
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: acmart class (tlmgr install acmart)
+
+\documentclass[sigconf,review]{acmart}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{Interactive Visualization of High-Dimensional Data
+       Using t-SNE and UMAP}
+
+\author{Author Name}
+\email{author@university.edu}
+\affiliation{%
+  \institution{University Name}
+  \city{City}
+  \country{Country}
+}
+
+\author{Co-Author Name}
+\email{coauthor@university.edu}
+\affiliation{%
+  \institution{University Name}
+  \city{City}
+  \country{Country}
+}
+
+\begin{abstract}
+We present an interactive visualization tool for
+high-dimensional data that combines t-SNE and UMAP
+with real-time exploration capabilities.
+\end{abstract}
+
+\ccsdesc[500]{Software and its engineering}
+\ccsdesc[300]{Human computer interaction}
+
+\keywords{dimensionality reduction, visualization, interactive systems}
+
+\maketitle
+
+\section{Introduction}
+High-dimensional data visualization is essential for
+understanding complex datasets in machine learning and
+data science.
+
+\section{Background}
+t-SNE~\cite{maaten2008} and UMAP~\cite{mcinnes2018} are
+two popular dimensionality reduction techniques.
+
+\section{System Design}
+Our system provides:
+\begin{itemize}
+\item Real-time projection updates.
+\item Interactive point selection and labeling.
+\item Comparative view of multiple projections.
+\end{itemize}
+
+\section{Evaluation}
+User studies show that our tool reduces exploration
+time by 40\% compared to static visualizations.
+
+\section{Conclusion}
+We demonstrated that interactive dimensionality
+reduction visualization significantly improves
+data exploration efficiency.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

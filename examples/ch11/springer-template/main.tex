@@ -1,0 +1,69 @@
+% !TEX program = pdflatex
+% Example: Springer LNCS conference paper template
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: llncs class (tlmgr install llncs)
+
+\documentclass{llncs}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{Efficient Neural Networks for Real-Time Signal Processing}
+\author{Author Name}
+\institute{Department of Electrical Engineering, University Name, \\
+\email{author@university.edu}}
+
+\maketitle
+
+\begin{abstract}
+This paper presents an efficient neural network architecture
+for real-time signal processing applications. The proposed
+model achieves competitive accuracy with significantly
+reduced computational cost.
+
+\keywords{Neural networks \and Signal processing \and Real-time systems}
+\end{abstract}
+
+\section{Introduction}
+Real-time signal processing requires models that balance
+accuracy with computational efficiency. Traditional deep
+learning models are often too heavy for real-time deployment.
+
+\section{Proposed Architecture}
+We propose a lightweight architecture using depthwise
+separable convolutions:
+\begin{equation}
+y = \text{DWConv}(x, k) \ast \text{PWConv}(W)
+\end{equation}
+where $k$ is the kernel size and $W$ are learned weights.
+
+\section{Experiments}
+Table~\ref{tab:results} compares our model with baselines.
+
+\begin{table}[htbp]
+\caption{Model comparison.}
+\label{tab:results}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Model & Accuracy & Parameters \\
+\midrule
+Full CNN & 94.2\% & 2.3M \\
+MobileNet & 92.1\% & 0.5M \\
+Proposed & 93.5\% & 0.3M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+Our lightweight architecture achieves 93.5\% accuracy with
+only 0.3M parameters, making it suitable for real-time
+deployment on edge devices.
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}

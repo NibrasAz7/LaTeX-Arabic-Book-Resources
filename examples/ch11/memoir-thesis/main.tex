@@ -1,0 +1,79 @@
+% !TEX program = pdflatex
+% Example: Thesis using memoir class
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: memoir class (included in TeX Live / MiKTeX)
+
+\documentclass[12pt, a4paper, oneside]{memoir}
+
+% Fine-grained page layout
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+
+% Chapter style
+\chapterstyle{default}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\begin{document}
+
+\frontmatter
+\title{A Comprehensive Study of Neural Networks\\
+       for Time Series Prediction}
+\author{Author Name}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction}
+\section{Background}
+Time series prediction is a fundamental problem in
+machine learning with applications in finance,
+healthcare, and engineering.
+
+\section{Objectives}
+This thesis aims to develop improved neural network
+architectures for time series prediction.
+
+\chapter{Literature Review}
+\section{Traditional Methods}
+ARIMA, exponential smoothing, and Kalman filters
+have been the standard approaches for decades.
+
+\section{Deep Learning Approaches}
+Recent work has explored RNNs, LSTMs, and Transformers
+for time series prediction.
+
+\chapter{Proposed Method}
+\section{Architecture}
+We propose a hybrid architecture combining temporal
+convolutional networks with attention mechanisms.
+
+\chapter{Experiments}
+\section{Datasets}
+We evaluate on four benchmark datasets.
+
+\section{Results}
+Our method achieves the lowest MSE across all datasets.
+
+\chapter{Conclusion}
+We presented a novel architecture for time series
+prediction that outperforms existing methods.
+
+\backmatter
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\chapter{Implementation Details}
+\section{Hyperparameters}
+The model uses a learning rate of 0.001, batch size
+of 32, and 100 training epochs.
+
+\end{document}

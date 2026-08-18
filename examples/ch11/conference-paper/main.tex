@@ -1,0 +1,84 @@
+% !TEX program = pdflatex
+% Example: IEEE conference paper template
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: IEEEtran class (included in TeX Live / MiKTeX)
+
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+
+\begin{document}
+
+\title{A Novel Approach to Signal Processing
+       Using Deep Learning}
+
+\author{
+\IEEEauthorblockN{Author One}
+\IEEEauthorblockA{Department, University\\
+City, Country\\
+Email: one@uni.edu}
+\and
+\IEEEauthorblockN{Author Two}
+\IEEEauthorblockA{Department, University\\
+City, Country\\
+Email: two@uni.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+This paper proposes a novel approach to signal processing
+using deep learning. We introduce a multi-scale convolutional
+architecture that captures both local and global features.
+\end{abstract}
+
+\begin{IEEEkeywords}
+signal processing, deep learning, neural networks.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{S}{ignal} processing has traditionally relied
+on hand-crafted features. Deep learning offers an alternative
+that learns features directly from data.
+
+\section{Related Work}
+Prior work~\cite{ref1,ref2} has explored CNN-based signal
+processing, but limited to single-scale architectures.
+
+\section{Proposed Method}
+Our multi-scale architecture processes the input signal
+at three resolutions simultaneously:
+\begin{equation}
+y_i = \text{Conv}_{k_i}(x), \quad i \in \{3, 5, 7\}
+\end{equation}
+
+\section{Experiments}
+Table~\ref{tab:results} shows the performance comparison.
+
+\begin{table}[htbp]
+\caption{Performance comparison.}
+\label{tab:results}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Method & Accuracy & Latency \\
+\midrule
+Baseline & 85.2\% & 12ms \\
+Single-scale & 89.5\% & 18ms \\
+Proposed & 93.7\% & 22ms \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+Our multi-scale approach achieves 93.7\% accuracy with
+acceptable latency for real-time applications.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

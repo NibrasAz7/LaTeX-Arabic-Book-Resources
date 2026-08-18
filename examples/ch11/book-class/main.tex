@@ -1,0 +1,55 @@
+% !TEX program = pdflatex
+% Example: Book using book class
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+
+\documentclass[10pt, oneside, a4paper]{book}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{makeidx}
+\makeindex
+\usepackage{hyperref}
+
+\begin{document}
+
+\frontmatter
+\title{Introduction to Machine Learning}
+\author{Author Name}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Foundations}
+\section{What is Machine Learning?}
+Machine learning is a subset of artificial intelligence
+that enables systems to learn from data.
+
+The concept of \index{machine learning} machine learning
+encompasses \index{supervised learning} supervised learning
+and \index{unsupervised learning} unsupervised learning.
+
+\chapter{Supervised Learning}
+\section{Linear Regression}
+Linear regression models the relationship between
+a dependent variable and one or more independent variables:
+\begin{equation}
+y = \beta_0 + \beta_1 x + \epsilon
+\end{equation}
+
+\chapter{Unsupervised Learning}
+\section{Clustering}
+Clustering groups similar data points together.
+We discuss \index{clustering!k-means} k-means and
+\index{clustering!hierarchical} hierarchical clustering.
+
+\backmatter
+\bibliographystyle{plain}
+\bibliography{references}
+
+\printindex
+
+\end{document}

@@ -1,0 +1,82 @@
+% !TEX program = pdflatex
+% Example: arXiv preprint template
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: arxiv style (included in TeX Live / MiKTeX)
+
+\documentclass{article}
+\usepackage{arxiv}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+
+\title{A Framework for Self-Supervised Learning in Time Series Analysis}
+
+\author{
+  Author One\thanks{Corresponding author: \texttt{one@uni.edu}} \\
+  Department of Computer Science, University A \\
+  \texttt{one@uni.edu} \\
+  \And
+  Author Two \\
+  Department of Computer Science, University B \\
+  \texttt{two@uni.edu}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Self-supervised learning has emerged as a powerful paradigm
+for learning representations from unlabeled data. We propose
+a framework that adapts self-supervised techniques to time
+series analysis, achieving state-of-the-art results on
+multiple benchmarks.
+\end{abstract}
+
+\section{Introduction}
+Self-supervised learning (SSL) has revolutionized natural
+language processing and computer vision. However, its
+application to time series data remains underexplored.
+
+\section{Methodology}
+Our framework consists of three components:
+\begin{enumerate}
+\item A pretext task based on temporal contrastive learning.
+\item A transformer-based encoder architecture.
+\item A fine-tuning strategy for downstream tasks.
+\end{enumerate}
+
+The contrastive loss is defined as:
+\begin{equation}
+\mathcal{L} = -\sum_{i} \log \frac{\exp(\mathbf{z}_i \cdot \mathbf{z}_j / \tau)}
+{\sum_k \exp(\mathbf{z}_i \cdot \mathbf{z}_k / \tau)}
+\end{equation}
+
+\section{Experiments}
+Table~\ref{tab:results} shows results on three benchmarks.
+
+\begin{table}[htbp]
+\caption{Classification accuracy on benchmark datasets.}
+\label{tab:results}
+\centering
+\begin{tabular}{lccc}
+\toprule
+Method & Dataset A & Dataset B & Dataset C \\
+\midrule
+Supervised & 88.2 & 91.5 & 85.3 \\
+Random Init & 72.1 & 78.3 & 70.8 \\
+Proposed SSL & 90.7 & 93.2 & 88.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+We presented a self-supervised learning framework for time
+series that outperforms supervised baselines while requiring
+no labeled data for pre-training.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

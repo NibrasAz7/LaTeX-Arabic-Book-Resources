@@ -1,0 +1,64 @@
+% !TEX program = pdflatex
+% Example: Elsevier journal article template
+% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% Requires: elsarticle class (tlmgr install elsarticle)
+
+\documentclass[review,3p,times]{elsarticle}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\journal{Pattern Recognition}
+
+\begin{document}
+
+\begin{frontmatter}
+\title{A Comparative Study of Feature Extraction Methods
+       for Biomedical Signal Classification}
+
+\author[a]{Author One}
+\author[b]{Author Two}
+
+\affiliation[a]{organization={Department of Biomedical Engineering, University A},
+                addressline={123 University Street}, city={City}, country={Country}}
+\affiliation[b]{organization={Department of Computer Science, University B},
+                addressline={456 College Avenue}, city={City}, country={Country}}
+
+\begin{abstract}
+This paper presents a comparative study of feature extraction
+methods for biomedical signal classification. We evaluate
+time-domain, frequency-domain, and time-frequency approaches
+on three public datasets.
+\end{abstract}
+
+\begin{keyword}
+Biomedical signals \sep Feature extraction \sep Classification \sep Deep learning
+\end{keyword}
+\end{frontmatter}
+
+\section{Introduction}
+Biomedical signal classification is a fundamental task in
+healthcare diagnostics. The choice of feature extraction
+method significantly impacts classification performance.
+
+\section{Methods}
+We compare three categories of feature extraction:
+\begin{itemize}
+\item Time-domain: statistical moments, Hjorth parameters.
+\item Frequency-domain: power spectral density, band powers.
+\item Time-frequency: wavelet transform, Hilbert-Huang transform.
+\end{itemize}
+
+\section{Results}
+Our experiments show that wavelet-based features achieve
+the highest classification accuracy across all datasets.
+
+\section{Conclusion}
+Time-frequency methods consistently outperform time-domain
+and frequency-domain approaches for biomedical signal classification.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}
