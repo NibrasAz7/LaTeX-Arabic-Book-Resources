@@ -1,0 +1,28 @@
+# Makefile for a LaTeX project using XeLaTeX + biber
+# Usage:
+#   make          - compile the document
+#   make clean    - remove auxiliary files
+#   make distclean - remove all generated files including PDF
+
+TEX = xelatex
+BIB = biber
+MAIN = main
+
+.PHONY: all clean distclean
+
+all: $(MAIN).pdf
+
+$(MAIN).pdf: $(MAIN).tex
+	$(TEX) -interaction=nonstopmode $(MAIN).tex
+	$(BIB) $(MAIN)
+	$(TEX) -interaction=nonstopmode $(MAIN).tex
+	$(TEX) -interaction=nonstopmode $(MAIN).tex
+
+clean:
+	rm -f *.aux *.log *.out *.toc *.lof *.lot
+	rm -f *.bbl *.blg *.bcf *.run.xml
+	rm -f *.idx *.ilg *.ind *.thm *.glo *.ist
+	rm -f *.synctex.gz *.fdb_latexmk *.fls
+
+distclean: clean
+	rm -f $(MAIN).pdf
