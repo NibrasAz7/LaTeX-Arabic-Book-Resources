@@ -1,0 +1,28 @@
+% Example: Lists with mixed Arabic/English in Beamer
+% Compile with XeLaTeX
+\documentclass{beamer}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+\usetheme{default}
+
+\title{الأدواتُ المستخدمة}
+\author{اسمُ الباحث}
+\institute{الجامعة}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}{الأدواتُ المستخدمة}
+  \begin{itemize}
+    \item معالجةُ الإشاراتِ: \LR{MNE-Python}
+    \item التعلّمُ العميقُ: \LR{PyTorch}
+    \item التصويرُ المرئيُّ: \LR{Matplotlib}
+    \item الإحصاءُ: \LR{SciPy}
+  \end{itemize}
+\end{frame}
+
+\end{document}

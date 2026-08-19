@@ -1,0 +1,33 @@
+% Example: Mathematics in Arabic Beamer presentation
+% Compile with XeLaTeX
+\documentclass{beamer}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+\usetheme{default}
+
+\title{معادلةُ فورييه}
+\author{اسمُ الباحث}
+\institute{الجامعة}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}{معادلةُ فورييه}
+  تُعطى معادلةُ تحويلِ فورييه
+  للدالةِ $f(t)$ بالصيغة:
+
+  \begin{equation}
+    F(\omega) = \int_{-\infty}^{\infty}
+    f(t) e^{-i\omega t} \, dt
+  \end{equation}
+
+  حيثُ $F(\omega)$ هوَ التحويلُ
+  التردديُّ، و$\omega$ هوَ الترددُ
+  الزاويُّ.
+\end{frame}
+
+\end{document}

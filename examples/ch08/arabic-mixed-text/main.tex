@@ -1,0 +1,32 @@
+% Example: Mixing English terms in Arabic Beamer presentation
+% Compile with XeLaTeX
+\documentclass{beamer}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+
+\usetheme{default}
+
+\title{المنهجية}
+\author{اسمُ الباحث}
+\institute{الجامعة}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}{المنهجية}
+  يَعتمدُ البحثُ على معالجةِ إشاراتِ
+  \LR{EEG} باستخدامِ مكتبةِ
+  \LR{MNE-Python} في بيئةِ
+  \LR{Python 3.12}.
+
+  \begin{itemize}
+    \item تَردُدُ العيّناتِ: \LR{250 Hz}
+    \item عددُ القنواتِ: \LR{32}
+    \item مُحرّكُ التصريفِ: \LR{XeLaTeX}
+  \end{itemize}
+\end{frame}
+
+\end{document}
