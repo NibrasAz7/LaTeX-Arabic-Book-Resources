@@ -1,0 +1,25 @@
+% !TEX program = xelatex
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{setspace}
+\usepackage{microtype}
+
+% Language setup
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+
+% Font setup
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.1]{Amiri}
+\newfontfamily\arabicfonttt[Script=Arabic]{Noto Kufi Arabic}
+\newfontfamily\englishfont[Script=Latin]{TeX Gyre Pagella}
+
+% Spacing
+\onehalfspacing
+\setlength{\parindent}{1em}
+
+\begin{document}
+% Arabic text goes here, written directly in Arabic.
+% Use \LR{English} for inline English.
+% Use \begin{english}...\end{english} for English blocks.
+\end{document}
