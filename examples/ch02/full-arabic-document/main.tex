@@ -19,7 +19,36 @@
 \setlength{\parindent}{1em}
 
 \begin{document}
-% Arabic text goes here, written directly in Arabic.
-% Use \LR{English} for inline English.
-% Use \begin{english}...\end{english} for English blocks.
+
+\title{مستندٌ عربيٌّ تجريبي}
+\author{اسمُ المؤلف}
+\date{\today}
+\maketitle
+
+\section{مقدمة}
+
+هذا مستندٌ عربيٌّ كاملٌ يَجمعُ كلَّ ما تَعلّمناه في الفصلِ الثاني. يَستخدمُ خطَّ أميري للنصِّ الأساسيّ وخطَّ نوتو كوفي للنصوصِ ذاتِ العرضِ الثابت. خيارُ \LR{locale=mashriq} يَضمنُ استخدامَ الأرقامِ الهندية: ٠١٢٣٤٥٦٧٨٩.
+
+\section{النصُّ ثنائيُّ اللغة}
+
+يُمكنُ كتابةُ مصطلحاتٍ إنجليزيةٍ داخلَ النصِّ العربيّ باستخدامِ الأمرِ \LR{\textbackslash LR\{\}}. مثلاً: نَستخدمُ \LR{LaTeX} لكتابةِ المستنداتِ العلمية. كذلك \LR{XeLaTeX} يَدعمُ \LR{Unicode} بشكلٍ مباشر.
+
+\section{القوائم}
+
+\begin{itemize}
+  \item العنصرُ الأول
+  \item العنصرُ الثاني
+  \item العنصرُ الثالث
+\end{itemize}
+
+\begin{enumerate}
+  \item الخطوةُ الأولى
+  \item الخطوةُ الثانية
+  \item الخطوةُ الثالثة
+\end{enumerate}
+
+\section{الخاتمة}
+
+هذا القالبُ هوَ نقطةُ الانطلاقِ لأيِّ مستندٍ عربيّ. يُمكنُ تعديلُ الخطوطِ والتباعدِ حسبَ الحاجة.
+
 \end{document}
