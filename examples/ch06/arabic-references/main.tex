@@ -1,0 +1,26 @@
+% !TEX program = xelatex
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.1]{Amiri}
+\newfontfamily\englishfont[Script=Latin]{TeX Gyre Pagella}
+
+\usepackage[backend=biber, style=authoryear, sorting=nyt]{biblatex}
+\addbibresource{references.bib}
+
+\begin{document}
+
+\section{Arabic References in BibLaTeX}
+
+This document demonstrates how to include Arabic references in a
+BibLaTeX bibliography with UTF-8 support.
+
+As noted by \textcite{alKhwarizmi1983}, the foundations of algebra
+were established in the 9th century. Later, \textcite{ibnSina2005}
+contributed to medical science.
+
+\printbibliography
+
+\end{document}

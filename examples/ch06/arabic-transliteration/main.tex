@@ -1,0 +1,25 @@
+% !TEX program = xelatex
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.1]{Amiri}
+\newfontfamily\englishfont[Script=Latin]{TeX Gyre Pagella}
+
+\usepackage[backend=biber, style=authoryear, sorting=nyt]{biblatex}
+\addbibresource{references.bib}
+
+\begin{document}
+
+\section{Transliterated Arabic References}
+
+When submitting to international journals, Arabic names should be
+transliterated using the ALA-LC system.
+
+The work of \textcite{khwarizmi1983} laid the foundation for
+algebraic methods in mathematics.
+
+\printbibliography
+
+\end{document}
