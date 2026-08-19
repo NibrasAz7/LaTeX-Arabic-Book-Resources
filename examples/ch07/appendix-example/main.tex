@@ -1,0 +1,30 @@
+% !TEX program = xelatex
+\documentclass[12pt, a4paper]{report}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.1]{Amiri}
+\newfontfamily\englishfont[Script=Latin]{TeX Gyre Pagella}
+
+\begin{document}
+
+\chapter{Main Chapter}
+\section{Introduction}
+This is the main content of the document.
+
+\appendix
+
+\chapter{Supplementary Data}
+\section{Raw Measurements}
+Tables and figures with raw experimental data
+appear here. This appendix is numbered as
+Appendix A.
+
+\chapter{Code Listings}
+\section{Preprocessing Script}
+The complete source code of the preprocessing
+pipeline. This appendix is numbered as
+Appendix B.
+
+\end{document}
