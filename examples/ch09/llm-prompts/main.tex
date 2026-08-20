@@ -1,0 +1,51 @@
+% Example: LLM prompts for LaTeX tasks
+% These prompts are designed for ChatGPT, Claude, Gemini, etc.
+% Copy and paste into your LLM of choice.
+
+% ============================================================
+% PROMPT 1: Generate a booktabs table
+% ============================================================
+/*
+Role: You are a LaTeX expert.
+Task: Create a publication-quality table.
+Requirements:
+  - Use the booktabs package (no vertical lines)
+  - 3 columns: Method, Accuracy (%), Runtime (s)
+  - 5 rows of realistic BCI classification data
+  - Include \caption and \label
+  - Numbers aligned with siunitx (S column type)
+Output: Complete LaTeX code block only, no explanation.
+*/
+
+% ============================================================
+% PROMPT 2: Debug a compilation error
+% ============================================================
+/*
+Role: You are a LaTeX debugging expert.
+Task: Fix a compilation error.
+Error message:
+  ! Undefined control sequence.
+  l.42 \LaTeX -> \LATEX
+Context: I defined \newcommand{\LaTeX}{\LATEX}
+         but \LATEX is not defined.
+Question: What is wrong and how to fix it?
+Output: Brief explanation + corrected code.
+*/
+
+% ============================================================
+% PROMPT 3: Generate BibTeX entries
+% ============================================================
+/*
+Role: You are a bibliography manager.
+Task: Generate BibTeX entries from paper titles.
+Input: 3 paper titles on BCI signal processing.
+Requirements:
+  - Use @article or @inproceedings as appropriate
+  - Include DOI for each entry
+  - Use consistent key format: author2024keyword
+  - Verify all fields are realistic
+Output: BibTeX entries only, with DOI links.
+
+Note: Always verify DOIs via CrossRef or Google
+Scholar. LLMs may hallucinate fake DOIs.
+*/
