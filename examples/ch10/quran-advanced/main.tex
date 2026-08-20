@@ -1,0 +1,41 @@
+% Example: Advanced Quran typesetting with quran package
+% Compile with XeLaTeX
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\usepackage[trans=en,translt]{quran}
+
+\begin{document}
+
+% --- Range of ayahs within a surah ---
+\quranayah[2][255][257]  % Ayat al-Kursi and following 2 ayahs
+
+% --- Full page (Mushaf page number) ---
+\quranpage[1]             % Page 1 of standard Mushaf
+
+% --- Juz with specific ruku ---
+\quranruku[1][1]          % First ruku of juz 1
+
+% --- Get metadata ---
+\surahname[1]             % "Al-Fatihah"
+\surahnameenglish[1]      % "The Opening"
+\ayahnumber[2][255]       % Returns ayah number
+\surahayatcount[1]        % Total ayahs in surah 1 (returns 7)
+
+% --- Bilingual: Arabic + English ---
+\quranayah[1][1]
+\par
+\quranayahen[1][1]        % English translation
+
+% --- Combine with custom formatting ---
+\begin{quote}
+  \arabicfont
+  \quranayah[112][1][4]   % Full Surah Ikhlas
+\end{quote}
+\par
+\textit{Translation:} \quransurahen[112]
+
+\end{document}

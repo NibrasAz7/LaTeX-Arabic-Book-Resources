@@ -1,0 +1,48 @@
+% Example: Advanced hadith typesetting with hadith package
+% Compile with XeLaTeX
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\usepackage[
+  bukhari, muslim, abudawud,
+  tirmidhi, nasai, ibnmajah,
+  malik,
+  showgrade,    % Show authenticity grade
+  showtrans     % Show English translation
+]{hadith}
+
+\begin{document}
+
+% --- Typeset with full metadata ---
+\hadith[bukhari][1]        % Arabic text + grade
+\hadithtrans[bukhari][1]   % English translation
+\hadithgrade[bukhari][1]   % Grade: Sahih
+
+% --- Shortcut commands per collection ---
+\hadithbukhari{1}
+\hadithmuslim{1}
+\hadithabudawud{1}
+\hadithtirmidhi{1}
+\hadithnasai{1}
+\hadithibnmajah{1}
+\hadithmalik{1}
+
+% --- Get collection metadata ---
+\hadithname{bukhari}       % "Sahih al-Bukhari"
+\hadithnamearabic{bukhari} % Arabic name
+\hadithcount{bukhari}      % Total hadith count
+
+% --- Inline citation in academic text ---
+As stated in \hadithcite[bukhari][1], the
+importance of knowledge is emphasized.
+
+% --- Custom formatting with environment ---
+\begin{hadithenv}{bukhari}{1}
+  % Custom formatting around the hadith
+  % text, grade, and translation
+\end{hadithenv}
+
+\end{document}

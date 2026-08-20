@@ -1,0 +1,38 @@
+% Example: Academic document combining Quran and Hadith
+% Compile with XeLaTeX
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{polyglossia}
+\setmainlanguage[locale=mashriq]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\usepackage[trans=en,translt]{quran}
+\usepackage[bukhari,muslim,showgrade,
+            showtrans]{hadith}
+
+\begin{document}
+\section{أهميةُ العلمِ في الإسلام}
+
+قالَ اللهُ تعالى:
+
+\begin{quote}
+\quranayah[96][1][5]
+\end{quote}
+
+\par\noindent
+\textit{الترجمة:} \quranayahen[96][1][5]
+
+\bigskip
+
+وقالَ النبيُّ صلى اللهُ عليهِ وسلم:
+
+\begin{quote}
+\hadith[bukhari][71]
+\end{quote}
+
+\par\noindent
+\textit{الدرجة:} \hadithgrade[bukhari][71]
+\par
+\textit{الترجمة:} \hadithtrans[bukhari][71]
+
+\end{document}
