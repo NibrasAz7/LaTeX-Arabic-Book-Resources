@@ -17,6 +17,26 @@
 \usepackage{amsmath,amssymb}
 \OnehalfSpacing
 
+% Self-contained bibliography
+\usepackage{filecontents}
+\begin{filecontents*}{references.bib}
+@book{goodfellow2016,
+  author = {Ian Goodfellow and Yoshua Bengio and Aaron Courville},
+  title  = {Deep Learning},
+  publisher = {MIT Press},
+  year   = {2016}
+}
+@article{hochreiter1997,
+  author = {Sepp Hochreiter and J\"urgen Schmidhuber},
+  title  = {Long Short-Term Memory},
+  journal = {Neural Computation},
+  volume = {9},
+  number = {8},
+  pages  = {1735--1780},
+  year   = {1997}
+}
+\end{filecontents*}
+
 \begin{document}
 
 \frontmatter
@@ -46,8 +66,9 @@ ARIMA, exponential smoothing, and Kalman filters
 have been the standard approaches for decades.
 
 \section{Deep Learning Approaches}
-Recent work has explored RNNs, LSTMs, and Transformers
-for time series prediction.
+Recent work has explored RNNs, LSTMs~\cite{hochreiter1997}, and Transformers
+for time series prediction. A comprehensive overview of deep learning
+methods is given in~\cite{goodfellow2016}.
 
 \chapter{Proposed Method}
 \section{Architecture}
