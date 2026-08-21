@@ -9,6 +9,27 @@
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 
+% Self-contained bibliography
+\usepackage{filecontents}
+\begin{filecontents*}{references.bib}
+@inproceedings{he2016,
+  author    = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+  title     = {Deep Residual Learning for Image Recognition},
+  booktitle = {Proc. CVPR},
+  year      = {2016},
+  pages     = {770--778}
+}
+@article{hochreiter1997,
+  author  = {Sepp Hochreiter and J\"urgen Schmidhuber},
+  title   = {Long Short-Term Memory},
+  journal = {Neural Computation},
+  volume  = {9},
+  number  = {8},
+  pages   = {1735--1780},
+  year    = {1997}
+}
+\end{filecontents*}
+
 \begin{document}
 
 \title{Efficient Neural Networks for Real-Time Signal Processing}
@@ -30,7 +51,9 @@ reduced computational cost.
 \section{Introduction}
 Real-time signal processing requires models that balance
 accuracy with computational efficiency. Traditional deep
-learning models are often too heavy for real-time deployment.
+learning models~\cite{hochreiter1997} are often too heavy
+for real-time deployment. Recent architectures~\cite{he2016}
+have shown that residual connections can improve efficiency.
 
 \section{Proposed Architecture}
 We propose a lightweight architecture using depthwise

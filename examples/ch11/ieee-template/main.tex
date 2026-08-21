@@ -11,6 +11,19 @@
 \usepackage{booktabs}
 \usepackage{url}
 
+% Self-contained bibliography
+\usepackage{filecontents}
+\begin{filecontents*}{references.bib}
+@article{ref1,
+  author  = {Smith, John and Doe, Jane},
+  title   = {Deep Learning for Signal Processing: A Comprehensive Review},
+  journal = {IEEE Transactions on Signal Processing},
+  volume  = {72},
+  pages   = {1--15},
+  year    = {2024}
+}
+\end{filecontents*}
+
 \begin{document}
 
 \title{A Novel Approach to Signal Processing Using Deep Learning}
