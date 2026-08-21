@@ -18,8 +18,6 @@
 
 % --- Typeset with full metadata ---
 \hadith[bukhari][1]        % Arabic text + grade
-\hadithtrans[bukhari][1]   % English translation
-\hadithgrade[bukhari][1]   % Grade: Sahih
 
 % --- Shortcut commands per collection ---
 \hadithbukhari{1}
@@ -31,18 +29,10 @@
 \hadithmalik{1}
 
 % --- Get collection metadata ---
-\hadithname{bukhari}       % "Sahih al-Bukhari"
-\hadithnamearabic{bukhari} % Arabic name
-\hadithcount{bukhari}      % Total hadith count
+\hadithname{bukhari}       % Collection name
 
 % --- Inline citation in academic text ---
 As stated in \hadithcite[bukhari][1], the
 importance of knowledge is emphasized.
-
-% --- Custom formatting with environment ---
-\begin{hadithenv}{bukhari}{1}
-  % Custom formatting around the hadith
-  % text, grade, and translation
-\end{hadithenv}
 
 \end{document}
